@@ -1,0 +1,16 @@
+
+/*
+void add_complex(double a_r, double a_i, double b_r, double b_i)
+{
+	double dst_r = (a_r + b_r);
+	double dst_i = (a_i + b_i);
+}
+
+void mult_complex(double a_r, double a_i, double b_r, double b_i)
+{
+	double dst_r = (a_r * b_r) - (a_i * b_i);
+	double dst_i = (a_r * b_i) + (a_i * b_r);
+
+	printf("dst_r = %f, dst_i = %f", dst_r, dst_i);
+}
+*/

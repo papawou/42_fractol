@@ -1,0 +1,11 @@
+{
+	"files.associations": {
+		"mlx.h": "c",
+		"utils.h": "c",
+		"mlx_int.h": "c",
+		"xkblib.h": "c",
+		"keysymdef.h": "c",
+		"camera.h": "c",
+		"t_mlx.h": "c"
+	}
+}
