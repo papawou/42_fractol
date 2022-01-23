@@ -35,7 +35,7 @@ void julia(t_img *img, t_cam cam)
 		while (y < HEIGHT)
 		{
 			n_percent = n_frac(x_min + x * cam.precision, y_min + y * cam.precision, c_r, c_i, cam.n_iter);
-			img_set_pxl_color(img, x, HEIGHT - 1 - y, get_color_int((t_color){0, 0, lerp(0, 255, n_percent), 255}));
+			img_set_pxl_color(img, x, HEIGHT - 1 - y, get_color_int(get_gradient_color(cam.grad, n_percent)));
 			++y;
 		}
 		++x;
@@ -55,7 +55,7 @@ void mandelbrot(t_img *img, t_cam cam)
 		while (y < HEIGHT)
 		{
 			n_percent = n_frac(0, 0, x_min + x * cam.precision, y_min + y * cam.precision, cam.n_iter);
-			img_set_pxl_color(img, x, HEIGHT - 1 - y, get_color_int((t_color){0, 0, lerp(0, 255, n_percent), 255}));
+			img_set_pxl_color(img, x, HEIGHT - 1 - y, get_color_int(get_gradient_color(cam.grad, n_percent)));
 			++y;
 		}
 		++x;

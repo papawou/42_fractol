@@ -2,7 +2,6 @@
 #include <unistd.h>
 #include <X11/keysymdef.h>
 
-#include "t_img.h"
 #include "t_scene.h"
 #include "fractal.h"
 
@@ -61,6 +60,7 @@ int main()
 
 	sc.mlx = mlx_init();
 	sc.win = mlx_new_window(sc.mlx, WIDTH, HEIGHT, "fractal");
+	sc.cam.grad = init_gradient();
 	reset_camera(&sc.cam);
 
 	mlx_mouse_hook(sc.win, mouse_hook, &sc);
