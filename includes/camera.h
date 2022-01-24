@@ -1,8 +1,8 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#define WIDTH 300
-#define HEIGHT 200
+#define WIDTH 1900
+#define HEIGHT 1000
 #define PRESET_MANDEL_X (-2.1 + (0.6 + 2.1)/2.0)
 
 #include "utils.h"

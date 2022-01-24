@@ -6,7 +6,7 @@ double lerp(double start, double end, double alpha)
 
 double invlerp(double start, double end, double value)
 {
-	return (value / (end - start));
+	return (value - start) / (end - start);
 }
 
 double remap(double input_a, double input_b, double out_a, double out_b, double value)

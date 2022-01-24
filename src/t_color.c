@@ -15,13 +15,20 @@ t_color lerp_color(t_color a, t_color b, double alpha)
 t_color get_gradient_color(t_gradient *grad, double alpha)
 {
 	int i = 0;
-	//find gap with alpha
-	while (i < grad->len - 1 && grad->keys[i] < alpha)
+
+	if (grad->len == 1) //one color set
+		return grad->colors[0];
+
+	while (i < grad->len && grad->keys[i] < alpha)
 		++i;
-	if (i == grad->len - 1) //start == last_color
-		return grad->colors[i];
-	return lerp_color(grad->colors[i], grad->colors[i+1],
-		invlerp(grad->keys[i], grad->keys[i+1], alpha));
+	
+	if (i == 0) //first inter
+		return grad->colors[0];
+	if (i == grad->len) //last inter
+		return grad->colors[grad->len - 1];
+	
+	return lerp_color(grad->colors[i - 1], grad->colors[i],
+		invlerp(grad->keys[i - 1], grad->keys[i], alpha));
 }
 
 t_gradient *init_gradient()
@@ -32,6 +39,11 @@ t_gradient *init_gradient()
 	grad->len = 3;
 
 	grad->colors = malloc(sizeof(t_color) * grad->len);
+	/*
+			grad->colors[0] = get_int_color(0xff12c2e9);
+	grad->colors[1] = get_int_color(0xffc471ed);
+	grad->colors[2] = get_int_color(0xfff64f59);
+	*/
 	grad->colors[0] = (t_color){255, 0, 0, 0};
 	grad->colors[1] = (t_color){0, 255, 0, 0};
 	grad->colors[2] = (t_color){0, 0, 255, 0};
