@@ -1,5 +1,5 @@
 #include "fractal.h"
-#include "t_color.h"
+#include "gradient.h"
 
 double n_frac(double z_r, double z_i, double c_r, double c_i, int n_max)
 {

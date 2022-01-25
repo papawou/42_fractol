@@ -7,6 +7,8 @@
 		"keysymdef.h": "c",
 		"camera.h": "c",
 		"t_mlx.h": "c",
-		"t_color.h": "c"
+		"t_color.h": "c",
+		"events.h": "c",
+		"gradient.h": "c"
 	}
 }

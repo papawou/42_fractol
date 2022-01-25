@@ -10,7 +10,7 @@ endif
 SRC_DIR := ./src/
 OBJ_DIR := ./obj/
 
-SRC := main.c	t_img.c t_color.c utils.c fractal.c	camera.c
+SRC := main.c	t_img.c color.c utils.c fractal.c	camera.c	events.c	scene.c gradient.c
 OBJ := ${SRC:.c=.o}
 
 all : ${NAME}

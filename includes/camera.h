@@ -6,7 +6,7 @@
 #define PRESET_MANDEL_X (-2.1 + (0.6 + 2.1)/2.0)
 
 #include "utils.h"
-#include "t_color.h"
+#include "gradient.h"
 
 typedef struct s_cam
 {
