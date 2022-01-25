@@ -5,6 +5,7 @@
 #include "scene.h"
 #include "fractal.h"
 #include "events.h"
+#include "parser.h"
 
 int render(t_scene *sc)
 {
@@ -14,13 +15,14 @@ int render(t_scene *sc)
 	return 0;
 }
 
-int main()
+int main(int argc, char *argv[])
 {
 	t_scene sc;
 
+	parse(argc - 1, argv);
+
 	if (init_scene(&sc))
 		return 1;
-
 	mlx_hook(sc.win, 17, 0, close_me, &sc);
 	mlx_mouse_hook(sc.win, mouse_hook, &sc);
 	mlx_key_hook(sc.win, key_hook, &sc);

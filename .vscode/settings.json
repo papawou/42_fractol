@@ -9,6 +9,7 @@
 		"t_mlx.h": "c",
 		"t_color.h": "c",
 		"events.h": "c",
-		"gradient.h": "c"
+		"gradient.h": "c",
+		"fractal.h": "c"
 	}
 }
