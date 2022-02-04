@@ -1,5 +1,5 @@
-#ifndef T_TYPES_H
-#define T_TYPES_H
+#ifndef T_MLX_H
+#define T_MLX_H
 
 #include <mlx.h>
 

@@ -32,7 +32,3 @@ int main(int argc, char *argv[])
 	free_scene(&sc);
 	return 0;
 }
-
-/*
-	add antoher fractal
-*/

@@ -10,6 +10,7 @@
 		"t_color.h": "c",
 		"events.h": "c",
 		"gradient.h": "c",
-		"fractal.h": "c"
+		"fractal.h": "c",
+		"scene.h": "c"
 	}
 }
